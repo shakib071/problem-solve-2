@@ -4,19 +4,28 @@
 using namespace std;
 
 
-bool solve(int a){
-    int pow=0;
-    
+bool solve(){
+    string s;
+    cin>>s;
+    if(s.length()>=3){
+        if(s[0]=='1' and s[1]=='0' and s[2]!= '0'){
+            int sum = 0;
+        for(int i=2;i<s.length();i++){
+            int p = s[i]-'0';
+            // cout<<p<<endl;
+            sum= sum*10 + p;
+        }
+          if(sum>=2) return true;
+          else return false;
 
-    while(a>=100){
+        }
         
-            pow =pow + (a%10)*10;
-            a=a/10;
-            // if(a==100) 
+        else {
+            return false;
+        }
         
     }
-    cout<<pow<<endl;
-    return false;
+    else return false;
 }
 
 int main(){
@@ -26,9 +35,8 @@ int main(){
      cin>>t;
 
      while(t--){
-        int a;
-        cin>>a;
-        if(solve(a))cout<<"YES"<<endl;
+       
+        if(solve())cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
      }
      
