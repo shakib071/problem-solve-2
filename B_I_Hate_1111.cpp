@@ -26,7 +26,7 @@ void solve(){
             break;
         }
         n-=111;
-        if(n<11)break;
+        if(n<0)break;
     }
     cout<<((ans)?"YES" : "NO")<<endl;
 }
