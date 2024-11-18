@@ -1,0 +1,2 @@
+temp="'a'"
+print(temp)
