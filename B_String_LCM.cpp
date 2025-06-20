@@ -9,8 +9,8 @@ int gcd(int a,int b){
     return gcd(b,a%b);
 }
 
-int lcmm(int n1,int n2){
 
+int lcmm(int n1,int n2){
     return (n1*n2)/gcd(n1,n2);
 }
 
